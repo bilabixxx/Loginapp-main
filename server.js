@@ -6,10 +6,7 @@ const passport = require('passport');
 const connectDB = require('./config/db');
 const app = express();
 connectDB();
-app.use(cors({
-	methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-	credentials: true
-  }));
+app.use(cors());
 
 app.use(bodyParser.json());
 app.use(require('./routes'));
