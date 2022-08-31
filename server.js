@@ -12,6 +12,6 @@ app.use(bodyParser.json());
 app.use(require('./routes'));
 require('./config/passport')(passport);
 app.use(passport.initialize());
-app.listen(8000, () => {
+app.listen(process.env.PORT || 5000, () => {
 	console.log('Server is started');
 });
